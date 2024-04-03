@@ -1,1 +1,84 @@
 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dfdfef;
+  }
+  #grandParent{
+    height: 600px;
+    width: 600px;
+    border: 1px solid black;
+    object-fit: cover;
+    overflow: hidden;
+    background-color: gainsboro;
+    border-radius: 5px;
+  
+  }
+  h1{
+    margin: 10px;
+  }
+  .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+  }
+  .heading #historyButton{
+    height: 30px;
+    width: 100px;
+  }
+  .preanrContainer{
+    border: 1px solid black;
+  }
+  .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      
+    }
+    
+    #searchInput{
+      height: 30px;
+      width: 200px;
+      border-radius: 10px;
+  
+    }
+    #searchButton{
+      height: 30px;
+      width: 100px;
+    }
+  
+  
+    #cardContainer{
+      height: 100%;
+      overflow: auto;
+        
+    }
+    
+    #card {
+    
+      height: 500px;
+      width: 500px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      scroll-margin-right: 2px;
+     
+    }
+    
+    .card-item {
+      margin-bottom: 10px;
+      border: 1px solid black;
+      background-color: grey;
+      height: 200px;
+      width: 180px;
+      margin: 10px;
+      gap: 5px;
+  
+    }
+  
+    
