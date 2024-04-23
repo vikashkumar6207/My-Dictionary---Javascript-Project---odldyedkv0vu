@@ -19,7 +19,7 @@ async function searchWord() {
   
   const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
   const data = await response.json();
-  
+  console.log(data);
   if (data.title === 'No Definitions Found') {
     cardItem.innerHTML = 'No definitions found for the word.';
     return;
@@ -37,8 +37,8 @@ function displayDefinition(word, definition) {
   
     const cardItem = document.createElement('div');
     cardItem.classList.add('card-item');
-    cardItem.innerHTML = `<strong>${word}</strong>: ${definition} 
-                          <button onclick="deleteEntry(${word})">Delete</button>`;
+    cardItem.innerHTML = `<strong>${word}</strong>: ${definition} <br>
+                          <button class="delete-btn" onclick="deleteEntry(${word})">Delete</button>`;
     
     card.appendChild(cardItem);
 }
@@ -50,7 +50,7 @@ function showHistory() {
     const cardItem = document.createElement('div');
     cardItem.classList.add('card-item');
     cardItem.innerHTML = `<strong>${item.word}</strong>: ${item.definition}
-    <button onclick="deleteEntry(${index})">Delete</button>`;
+    <button class="delete-btn" onclick="deleteEntry(${index})">Delete</button>`;
     
     card.appendChild(cardItem);
   });
